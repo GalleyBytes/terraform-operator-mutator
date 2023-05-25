@@ -1,6 +1,6 @@
 FROM golang:1.19
 WORKDIR /build
-COPY main.go go.mod /build
+COPY main.go go.mod /build/
 COPY internal /build/internal
 RUN go get
 RUN CGO_ENABLED=0 go build -o run main.go
