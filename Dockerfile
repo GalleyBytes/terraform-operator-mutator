@@ -8,3 +8,4 @@ RUN CGO_ENABLED=0 go build -o run main.go
 FROM scratch
 COPY --from=0 /build/run /run
 ENTRYPOINT ["/run"]
+LABEL org.opencontainers.image.source https://github.com/galleybytes/terraform-operator-mutator
